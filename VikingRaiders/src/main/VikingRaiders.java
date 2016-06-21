@@ -3,6 +3,7 @@ package main;
 import java.util.ArrayList;
 import java.util.TimerTask;
 import java.util.Timer;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -44,11 +45,16 @@ public class VikingRaiders {
             bank = bank - cost;
             incomeTick = incomeTick + 10000;
             food = food + 10;
+            
         }
-        else {
-            System.out.println("You're broke");
+        else if (farmhouses.size()*10 <= farmers.size()) {
+            JOptionPane.showMessageDialog(null, "Build more farmhouses to hire more farmers. One farmhouse can sustain 10 farmers");
         }
-
+        else if (bank <= cost) {
+            JOptionPane.showMessageDialog(null, "Not enough pennings");
+        }
+        
+    
 
     }
     public static void buyForge() {
@@ -57,13 +63,22 @@ public class VikingRaiders {
             forges.add("Forge");
             bank = bank - 50;
         }
+        else if (bank <= cost) {
+            JOptionPane.showMessageDialog(null, "Not enough pennings");
+        }
     }
         
     public static void buyFarmhouse() {
         int cost = 10;
-        if (bank >= cost) {
+        if (bank >= cost && farmers.size()>0) {
             farmhouses.add("Farmhouse");
             bank = bank - 10;
+        }
+        else if (farmers.size()<=0) {
+            JOptionPane.showMessageDialog(null, "You have no farmers, no further farmhouses are required");
+        }
+        else if (bank <= cost) {
+            JOptionPane.showMessageDialog(null, "Not enough pennings");
         }
     }
             
@@ -76,10 +91,15 @@ public class VikingRaiders {
             upkeep = upkeep + 5;
             ironIncome = ironIncome + 1;
         }
-        else {
-            System.out.println("You're broke");
+        else if (bank <= cost) {
+            JOptionPane.showMessageDialog(null, "Not enough pennings");
         }
-
+        else if (food <= upkeep) {
+            JOptionPane.showMessageDialog(null, "Upkeep is higher than food production. Hire more farmers");
+        }
+         else if (forges.size()*10 <= smiths.size()) {
+            JOptionPane.showMessageDialog(null, "Build more forges to hire smiths. One forge can sustain 10 smiths");
+        }
     }
     /**
      * Setters og getters for alle nødvendige variabler
