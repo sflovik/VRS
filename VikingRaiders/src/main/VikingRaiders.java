@@ -64,7 +64,6 @@ public class VikingRaiders {
         if (bank >= cost) {
             farmhouses.add("Farmhouse");
             bank = bank - 10;
-            ironIncome = ironIncome + 1;
         }
     }
             

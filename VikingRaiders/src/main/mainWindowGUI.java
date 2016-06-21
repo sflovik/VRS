@@ -36,7 +36,6 @@ public class mainWindowGUI extends javax.swing.JFrame {
         btnBuySmith = new javax.swing.JButton();
         jLabelFarmers = new javax.swing.JLabel();
         jLabelSmiths = new javax.swing.JLabel();
-        jTickProgress = new javax.swing.JProgressBar();
         jLabelUpkeep = new javax.swing.JLabel();
         jLabelFood = new javax.swing.JLabel();
         btnBuyForge = new javax.swing.JButton();
@@ -44,6 +43,7 @@ public class mainWindowGUI extends javax.swing.JFrame {
         jLabelFarmhouses = new javax.swing.JLabel();
         jLabelIron = new javax.swing.JLabel();
         jLabelIronIncome = new javax.swing.JLabel();
+        btnBuyFarmhouse = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,6 +105,13 @@ public class mainWindowGUI extends javax.swing.JFrame {
 
         jLabelIronIncome.setText("jLabel1");
 
+        btnBuyFarmhouse.setText("Buy farmhouse");
+        btnBuyFarmhouse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuyFarmhouseActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -112,42 +119,30 @@ public class mainWindowGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabelBank)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabelIron)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabelIncome)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabelIronIncome)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
-                                        .addComponent(jTickProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(18, 18, 18))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabelFarmers)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabelFarmhouses))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabelSmiths)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabelForges)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnBuySmith, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnBuyFarmer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnBuyForge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelUpkeep)
-                            .addComponent(jLabelFood))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(jLabelBank)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabelIron))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabelIncome)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabelIronIncome))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabelFarmers)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabelFarmhouses))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabelSmiths)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabelForges))
+                    .addComponent(jLabelUpkeep)
+                    .addComponent(jLabelFood))
+                .addGap(18, 310, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnBuySmith, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBuyFarmer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBuyForge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBuyFarmhouse, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -160,12 +155,10 @@ public class mainWindowGUI extends javax.swing.JFrame {
                         .addComponent(jLabelIron))
                     .addComponent(btnBuyFarmer))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabelIncome)
-                        .addComponent(btnBuySmith)
-                        .addComponent(jLabelIronIncome))
-                    .addComponent(jTickProgress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelIncome)
+                    .addComponent(btnBuySmith)
+                    .addComponent(jLabelIronIncome))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -176,11 +169,13 @@ public class mainWindowGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelSmiths)
                     .addComponent(jLabelForges))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelUpkeep)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelUpkeep)
+                    .addComponent(btnBuyFarmhouse))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelFood)
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
 
         pack();
@@ -214,6 +209,11 @@ public class mainWindowGUI extends javax.swing.JFrame {
         VikingRaiders.buyForge();
         updateLabels();
     }//GEN-LAST:event_btnBuyForgeActionPerformed
+
+    private void btnBuyFarmhouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuyFarmhouseActionPerformed
+        VikingRaiders.buyFarmhouse();
+        updateLabels();
+    }//GEN-LAST:event_btnBuyFarmhouseActionPerformed
     public void updateLabels() {
         jLabelIron.setText("Iron:" + "  " + VikingRaiders.getIron());
         jLabelIronIncome.setText("Iron income:" + "  " + VikingRaiders.getIronIncome());
@@ -264,6 +264,7 @@ public class mainWindowGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBuyFarmer;
+    private javax.swing.JButton btnBuyFarmhouse;
     private javax.swing.JButton btnBuyForge;
     private javax.swing.JButton btnBuySmith;
     private javax.swing.JLabel jLabelBank;
@@ -276,6 +277,5 @@ public class mainWindowGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelIronIncome;
     private javax.swing.JLabel jLabelSmiths;
     private javax.swing.JLabel jLabelUpkeep;
-    private javax.swing.JProgressBar jTickProgress;
     // End of variables declaration//GEN-END:variables
 }

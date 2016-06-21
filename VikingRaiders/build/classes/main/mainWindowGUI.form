@@ -26,55 +26,35 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabelBank" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabelIron" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabelIncome" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabelIronIncome" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="164" max="32767" attributes="0"/>
-                                      <Component id="jTickProgress" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabelFarmers" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabelFarmhouses" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabelSmiths" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabelForges" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="btnBuySmith" max="32767" attributes="0"/>
-                          <Component id="btnBuyFarmer" max="32767" attributes="0"/>
-                          <Component id="btnBuyForge" alignment="0" max="32767" attributes="0"/>
-                      </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabelBank" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabelIron" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabelUpkeep" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelFood" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabelIncome" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabelIronIncome" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabelFarmers" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabelFarmhouses" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabelSmiths" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabelForges" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jLabelUpkeep" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelFood" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="18" pref="310" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="btnBuySmith" max="32767" attributes="0"/>
+                  <Component id="btnBuyFarmer" max="32767" attributes="0"/>
+                  <Component id="btnBuyForge" alignment="0" max="32767" attributes="0"/>
+                  <Component id="btnBuyFarmhouse" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -92,13 +72,10 @@
                   <Component id="btnBuyFarmer" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabelIncome" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnBuySmith" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabelIronIncome" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="jTickProgress" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabelIncome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnBuySmith" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelIronIncome" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -113,11 +90,14 @@
                   <Component id="jLabelSmiths" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabelForges" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jLabelUpkeep" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jLabelUpkeep" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnBuyFarmhouse" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabelFood" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="169" max="32767" attributes="0"/>
+              <EmptySpace pref="165" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -164,8 +144,6 @@
         <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JProgressBar" name="jTickProgress">
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabelUpkeep">
       <Properties>
         <Property name="text" type="java.lang.String" value="jLabel3"/>
@@ -203,6 +181,14 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnBuyFarmhouse">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buy farmhouse"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuyFarmhouseActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
