@@ -26,35 +26,57 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabelBank" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabelIron" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabelFood" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelUpkeep" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabelIncome" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabelIronIncome" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabelBank" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jLabelIron" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jLabelWood" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabelSmiths" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelFarmers" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelIncome" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabelIronIncome" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jLabelWoodIncome" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jLabelForges" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelFarmhouses" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelWoodshops" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="78" pref="185" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="btnBuySmith" max="32767" attributes="0"/>
+                          <Component id="btnBuyFarmer" pref="123" max="32767" attributes="0"/>
+                          <Component id="btnBuyForge" alignment="1" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabelFarmers" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabelFarmhouses" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabelWoodsmen" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="btnBuyWoodshop" max="32767" attributes="0"/>
+                          <Component id="btnBuyFarmhouse" max="32767" attributes="0"/>
+                          <Component id="btnBuyWoodsman" pref="123" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabelSmiths" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabelForges" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="jLabelUpkeep" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelFood" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="18" pref="310" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="btnBuySmith" max="32767" attributes="0"/>
-                  <Component id="btnBuyFarmer" max="32767" attributes="0"/>
-                  <Component id="btnBuyForge" alignment="0" max="32767" attributes="0"/>
-                  <Component id="btnBuyFarmhouse" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -63,41 +85,66 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabelBank" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabelIron" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelWood" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="btnBuyFarmer" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabelIncome" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnBuySmith" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelIronIncome" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabelIncome" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelIronIncome" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelWoodIncome" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="btnBuySmith" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                      <Component id="btnBuyForge" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabelFarmers" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelFarmhouses" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabelSmiths" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelForges" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnBuyFarmhouse" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabelWoodsmen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelWoodshops" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabelFarmers" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabelFarmhouses" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="btnBuyForge" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabelSmiths" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelForges" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jLabelUpkeep" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnBuyFarmhouse" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="btnBuyWoodsman" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnBuyWoodshop" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="33" max="32767" attributes="0"/>
+              <Component id="jLabelUpkeep" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabelFood" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="165" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -105,7 +152,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabelBank">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
+        <Property name="text" type="java.lang.String" value="Bank"/>
       </Properties>
       <Events>
         <EventHandler event="inputMethodTextChanged" listener="java.awt.event.InputMethodListener" parameters="java.awt.event.InputMethodEvent" handler="jLabelBankInputMethodTextChanged"/>
@@ -114,7 +161,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelIncome">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
+        <Property name="text" type="java.lang.String" value="Income"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnBuyFarmer">
@@ -136,22 +183,22 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelFarmers">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
+        <Property name="text" type="java.lang.String" value="Farmers"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelSmiths">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
+        <Property name="text" type="java.lang.String" value="Smiths"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelUpkeep">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel3"/>
+        <Property name="text" type="java.lang.String" value="Upkeep"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelFood">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
+        <Property name="text" type="java.lang.String" value="Food "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnBuyForge">
@@ -164,22 +211,22 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelForges">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
+        <Property name="text" type="java.lang.String" value="Forges"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelFarmhouses">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
+        <Property name="text" type="java.lang.String" value="Farmhouses"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelIron">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
+        <Property name="text" type="java.lang.String" value="Iron"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelIronIncome">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
+        <Property name="text" type="java.lang.String" value="Iron income"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnBuyFarmhouse">
@@ -189,6 +236,42 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuyFarmhouseActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnBuyWoodsman">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buy woodsman"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuyWoodsmanActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelWoodsmen">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Woodsmen"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelWoodshops">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Woodshops"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnBuyWoodshop">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buy woodshop"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuyWoodshopActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelWood">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Wood"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelWoodIncome">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Wood income"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

@@ -15,6 +15,9 @@ public class VikingRaiders {
     private static ArrayList<String> smiths = new ArrayList<>();
     private static ArrayList<String> farmhouses = new ArrayList<>();
     private static ArrayList<String> forges = new ArrayList<>();
+    private static ArrayList<String> woodsmen = new ArrayList<>();
+    private static ArrayList<String> woodshops = new ArrayList<>();
+   
     private static int upkeep = 0;
     private static int happiness = 100;
     private static int bank = 10;
@@ -86,7 +89,7 @@ public class VikingRaiders {
         int cost = 50;
         if (bank >= cost && food > upkeep && forges.size()*10 > smiths.size()) {
             smiths.add("Smith");
-            bank = bank - 50;
+            bank = bank - cost;
             incomeTick = incomeTick + 5;
             upkeep = upkeep + 5;
             ironIncome = ironIncome + 1;
@@ -100,6 +103,48 @@ public class VikingRaiders {
          else if (forges.size()*10 <= smiths.size()) {
             JOptionPane.showMessageDialog(null, "Build more forges to hire smiths. One forge can sustain 10 smiths");
         }
+    }
+    public static void buyWoodshop() {
+        int cost = 400;
+        int woodCost = 50;
+        if (bank>= cost && woodsmen.size()>0 && woodCost < wood ) {
+            woodshops.add("Woodshop");
+            bank = bank - cost;
+            wood = wood - woodCost;
+        }
+        else if (bank <= cost) {
+            JOptionPane.showMessageDialog(null, "Not enough pennings");
+        }
+        else if (wood <= woodCost) {
+            JOptionPane.showMessageDialog(null, "Not enough wood");
+        }
+        else if (woodsmen.size()<= 0) {
+            JOptionPane.showMessageDialog(null, "Woodshops require a woodsman to build them. Hire a woodsman!");
+        }
+    }
+    public static void buyWoodsman() {
+        int cost = 200;
+        int ironCost = 10;
+        if (bank>= cost && food > upkeep && smiths.size()>=1) {
+            woodsmen.add("Woodsman");
+            bank = bank - cost;
+            iron = iron - ironCost;
+            upkeep = upkeep + 15;
+            woodIncome = woodIncome + 1;
+        }
+        else if (iron <= ironCost) {
+            JOptionPane.showMessageDialog(null, "Not enough iron." + "  " + ironCost + "  " + "iron required");
+        }
+        else if (bank <= cost) {
+            JOptionPane.showMessageDialog(null, "Not enough pennings");
+        }
+        else if (food <= upkeep) {
+            JOptionPane.showMessageDialog(null, "Upkeep is higher than food production. Hire more farmers");
+        }
+        else if (smiths.size()<= 0) {
+            JOptionPane.showMessageDialog(null, "Woodsmen require tools! You need to have at least 1 smith");
+        }
+        
     }
     /**
      * Setters og getters for alle nødvendige variabler
@@ -167,6 +212,12 @@ public class VikingRaiders {
     }
     public static void setIron(int iron) {
         VikingRaiders.iron = iron;
+    }
+    public static int getWoodsmen() {
+        return woodsmen.size();
+    }
+    public static int getWoodshops() {
+        return woodshops.size();
     }
     /**
      * Usikker på om denne trengs, but why the eff not
