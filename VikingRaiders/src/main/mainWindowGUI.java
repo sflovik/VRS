@@ -37,7 +37,13 @@ public class mainWindowGUI extends javax.swing.JFrame {
         jLabelFarmers = new javax.swing.JLabel();
         jLabelSmiths = new javax.swing.JLabel();
         jTickProgress = new javax.swing.JProgressBar();
-        jLabelMorale = new javax.swing.JLabel();
+        jLabelUpkeep = new javax.swing.JLabel();
+        jLabelFood = new javax.swing.JLabel();
+        btnBuyForge = new javax.swing.JButton();
+        jLabelForges = new javax.swing.JLabel();
+        jLabelFarmhouses = new javax.swing.JLabel();
+        jLabelIron = new javax.swing.JLabel();
+        jLabelIronIncome = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,7 +86,24 @@ public class mainWindowGUI extends javax.swing.JFrame {
 
         jLabelSmiths.setText("jLabel1");
 
-        jLabelMorale.setText("jLabel1");
+        jLabelUpkeep.setText("jLabel3");
+
+        jLabelFood.setText("jLabel1");
+
+        btnBuyForge.setText("Buy forge");
+        btnBuyForge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuyForgeActionPerformed(evt);
+            }
+        });
+
+        jLabelForges.setText("jLabel1");
+
+        jLabelFarmhouses.setText("jLabel1");
+
+        jLabelIron.setText("jLabel1");
+
+        jLabelIronIncome.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,22 +112,41 @@ public class mainWindowGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelBank)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabelIncome)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
-                                .addComponent(jTickProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabelBank)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabelIron)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabelIncome)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabelIronIncome)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
+                                        .addComponent(jTickProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabelFarmers)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabelFarmhouses))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabelSmiths)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabelForges)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnBuySmith, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnBuyFarmer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(btnBuyFarmer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnBuyForge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelFarmers)
-                            .addComponent(jLabelSmiths)
-                            .addComponent(jLabelMorale))
+                            .addComponent(jLabelUpkeep)
+                            .addComponent(jLabelFood))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -113,21 +155,32 @@ public class mainWindowGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelBank)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabelBank)
+                        .addComponent(jLabelIron))
                     .addComponent(btnBuyFarmer))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabelIncome)
-                        .addComponent(btnBuySmith))
+                        .addComponent(btnBuySmith)
+                        .addComponent(jLabelIronIncome))
                     .addComponent(jTickProgress, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabelFarmers)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabelFarmers)
+                        .addComponent(jLabelFarmhouses))
+                    .addComponent(btnBuyForge))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelSmiths)
+                    .addComponent(jLabelForges))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelSmiths)
-                .addGap(61, 61, 61)
-                .addComponent(jLabelMorale)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addComponent(jLabelUpkeep)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelFood)
+                .addContainerGap(169, Short.MAX_VALUE))
         );
 
         pack();
@@ -156,12 +209,23 @@ public class mainWindowGUI extends javax.swing.JFrame {
         VikingRaiders.buySmiths();
         updateLabels();
     }//GEN-LAST:event_btnBuySmithActionPerformed
+
+    private void btnBuyForgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuyForgeActionPerformed
+        VikingRaiders.buyForge();
+        updateLabels();
+    }//GEN-LAST:event_btnBuyForgeActionPerformed
     public void updateLabels() {
+        jLabelIron.setText("Iron:" + "  " + VikingRaiders.getIron());
+        jLabelIronIncome.setText("Iron income:" + "  " + VikingRaiders.getIronIncome());
+        jLabelFarmhouses.setText("Number of farmhouses:" + "  " + VikingRaiders.getFarmhouses());
+        jLabelForges.setText("Number of forges:" + "  " + VikingRaiders.getForges());
+        jLabelFood.setText("Food production:" + "  " + VikingRaiders.getFood());
+        jLabelUpkeep.setText("Current upkeep:" + "  " + VikingRaiders.getUpkeep());
         jLabelBank.setText("Treasury:" + "  " + valueOf(VikingRaiders.getBank()));
         jLabelIncome.setText("Income:" + "  " +valueOf(VikingRaiders.getIncomeTick()));
         jLabelFarmers.setText("Number of farmers:" + "  " + valueOf(VikingRaiders.getFarmers()));
         jLabelSmiths.setText("Number of smiths:" + "  " + valueOf(VikingRaiders.getSmiths()));
-        jLabelMorale.setText("Happiness of farmers (buy farmhouses to prevent it from dropping):" + VikingRaiders.getHappiness() + "/ 100");
+        
     }
     /**
      * @param args the command line arguments
@@ -200,12 +264,18 @@ public class mainWindowGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBuyFarmer;
+    private javax.swing.JButton btnBuyForge;
     private javax.swing.JButton btnBuySmith;
     private javax.swing.JLabel jLabelBank;
     private javax.swing.JLabel jLabelFarmers;
+    private javax.swing.JLabel jLabelFarmhouses;
+    private javax.swing.JLabel jLabelFood;
+    private javax.swing.JLabel jLabelForges;
     private javax.swing.JLabel jLabelIncome;
-    private javax.swing.JLabel jLabelMorale;
+    private javax.swing.JLabel jLabelIron;
+    private javax.swing.JLabel jLabelIronIncome;
     private javax.swing.JLabel jLabelSmiths;
+    private javax.swing.JLabel jLabelUpkeep;
     private javax.swing.JProgressBar jTickProgress;
     // End of variables declaration//GEN-END:variables
 }

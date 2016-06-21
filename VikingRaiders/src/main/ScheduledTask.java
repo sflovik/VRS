@@ -19,6 +19,10 @@ public class ScheduledTask extends TimerTask {
         int income = VikingRaiders.getIncomeTick();
         int updatedBank = Bank + income;
         VikingRaiders.setBank(updatedBank);
+        int iron = VikingRaiders.getIron();
+        int ironIncome = VikingRaiders.getIronIncome();
+        int updatedIron = iron + ironIncome;
+        VikingRaiders.setIron(updatedIron);
         gui.setVisible(true);
         if (VikingRaiders.getFarmers() > 10 && VikingRaiders.getFarmhouses() == 0) {
             int happiness = VikingRaiders.getHappiness();

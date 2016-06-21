@@ -14,13 +14,19 @@ public class VikingRaiders {
     private static ArrayList<String> smiths = new ArrayList<>();
     private static ArrayList<String> farmhouses = new ArrayList<>();
     private static ArrayList<String> forges = new ArrayList<>();
+    private static int upkeep = 0;
     private static int happiness = 100;
     private static int bank = 10;
     private static int incomeTick = 0;
+    private static int food = 0;
+    private static int iron = 0;
+    private static int wood = 0;
+    private static int ironIncome = 0;
+    private static int woodIncome = 0;
     
     public static void main(String[] args) throws InterruptedException {
       
-       
+        farmhouses.add("Farmhouse");
         Timer addIncome = new Timer();
         ScheduledTask st = new ScheduledTask();
         addIncome.schedule(st, 0 , 5000);
@@ -33,10 +39,11 @@ public class VikingRaiders {
     }
     public static void buyFarmer() {
         int cost = 10;
-        if (bank > cost || bank == cost) {
+        if (bank >= cost && farmhouses.size()*10 > farmers.size()) {
             farmers.add("Farmer");
             bank = bank - cost;
-            incomeTick = incomeTick + 1;
+            incomeTick = incomeTick + 10000;
+            food = food + 10;
         }
         else {
             System.out.println("You're broke");
@@ -44,18 +51,41 @@ public class VikingRaiders {
 
 
     }
+    public static void buyForge() {
+        int cost = 50;
+        if (bank >= cost) {
+            forges.add("Forge");
+            bank = bank - 50;
+        }
+    }
+        
+    public static void buyFarmhouse() {
+        int cost = 10;
+        if (bank >= cost) {
+            farmhouses.add("Farmhouse");
+            bank = bank - 10;
+            ironIncome = ironIncome + 1;
+        }
+    }
+            
     public static void buySmiths() {
         int cost = 50;
-        if (bank > cost || bank == cost) {
+        if (bank >= cost && food > upkeep && forges.size()*10 > smiths.size()) {
             smiths.add("Smith");
             bank = bank - 50;
             incomeTick = incomeTick + 5;
+            upkeep = upkeep + 5;
+            ironIncome = ironIncome + 1;
         }
         else {
             System.out.println("You're broke");
         }
 
     }
+    /**
+     * Setters og getters for alle nødvendige variabler
+     * @return 
+     */
     public static int getHappiness() {
         return happiness;
     }
@@ -85,6 +115,46 @@ public class VikingRaiders {
     }
     public static int getSmiths() {
         return smiths.size();
+    }
+    public static int getUpkeep() {
+        return upkeep;
+    }
+    public static int getFood() {
+        return food;
+    }
+    public static int getForges() {
+        return forges.size();
+    }
+    public static int getWoodIncome() {
+        return woodIncome;
+    }
+    public static void setWoodIncome(int woodIncome) {
+        VikingRaiders.woodIncome = woodIncome;
+    }
+    public static int getIronIncome() {
+        return ironIncome;
+    }
+    public static void setIronIncome(int ironIncome) {
+        VikingRaiders.ironIncome = ironIncome;
+    }
+    public static int getWood() {
+        return wood;
+    }
+    public static void setWood(int wood) {
+        VikingRaiders.wood = wood;
+    }
+    public static int getIron() {
+        return iron;
+    }
+    public static void setIron(int iron) {
+        VikingRaiders.iron = iron;
+    }
+    /**
+     * Usikker på om denne trengs, but why the eff not
+     * @param i set upkeep
+     */
+    public static void setUpkeep(int i) {
+        upkeep = i;
     }
 
    
