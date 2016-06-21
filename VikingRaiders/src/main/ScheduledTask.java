@@ -12,7 +12,7 @@ import java.util.TimerTask;
  * @author Sondre
  */
 public class ScheduledTask extends TimerTask {
-    mainWindowGUI gui = new mainWindowGUI();
+    static mainWindowGUI gui = new mainWindowGUI();
     @Override
     public void run() {
         int Bank = VikingRaiders.getBank();

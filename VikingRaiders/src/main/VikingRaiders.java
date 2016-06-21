@@ -1,6 +1,7 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.TimerTask;
 import java.util.Timer;
 import javax.swing.JOptionPane;
@@ -17,7 +18,8 @@ public class VikingRaiders {
     private static ArrayList<String> forges = new ArrayList<>();
     private static ArrayList<String> woodsmen = new ArrayList<>();
     private static ArrayList<String> woodshops = new ArrayList<>();
-   
+    
+    private static String missionResult = "";
     private static int upkeep = 0;
     private static int happiness = 100;
     private static int bank = 10;
@@ -27,11 +29,12 @@ public class VikingRaiders {
     private static int wood = 0;
     private static int ironIncome = 0;
     private static int woodIncome = 0;
+    static Timer addIncome = new Timer();
     
     public static void main(String[] args) throws InterruptedException {
       
         farmhouses.add("Farmhouse");
-        Timer addIncome = new Timer();
+      
         ScheduledTask st = new ScheduledTask();
         addIncome.schedule(st, 0 , 5000);
         for (int i = 0; i <= 5; i++) {
@@ -129,7 +132,7 @@ public class VikingRaiders {
             woodsmen.add("Woodsman");
             bank = bank - cost;
             iron = iron - ironCost;
-            upkeep = upkeep + 15;
+            upkeep = upkeep + 10;
             woodIncome = woodIncome + 1;
         }
         else if (iron <= ironCost) {
@@ -145,6 +148,22 @@ public class VikingRaiders {
             JOptionPane.showMessageDialog(null, "Woodsmen require tools! You need to have at least 1 smith");
         }
         
+    }
+   
+
+    public static void performMission() {
+        
+
+        int temp = (Math.random() <= 0.5) ? 1 : 2;
+        switch (temp) {
+            case 1: 
+                setMissionResult("win");
+                break;
+                
+            case 2:
+                setMissionResult("loss");
+                break;
+        }
     }
     /**
      * Setters og getters for alle nødvendige variabler
@@ -218,6 +237,12 @@ public class VikingRaiders {
     }
     public static int getWoodshops() {
         return woodshops.size();
+    }
+    public static String getMissionResult() {
+        return missionResult;
+    }
+    public static void setMissionResult(String missionResult) {
+        VikingRaiders.missionResult = missionResult;
     }
     /**
      * Usikker på om denne trengs, but why the eff not
