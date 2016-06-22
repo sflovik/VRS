@@ -22,6 +22,8 @@ public class mainWindowGUI extends javax.swing.JFrame {
     public mainWindowGUI() {
         initComponents();
         updateLabels();
+        
+        
     }
 
     /**
@@ -310,7 +312,7 @@ public class mainWindowGUI extends javax.swing.JFrame {
       //  VikingRaiders.addIncome.cancel();
     }//GEN-LAST:event_btnMissionsActionPerformed
     public void updateLabels() {
-        
+       
         jLabelWood.setText("Wood:" + "  " + VikingRaiders.getWood());
         jLabelWoodIncome.setText("Wood income:" +"  " + VikingRaiders.getWoodIncome());
         jLabelWoodsmen.setText("Number of woodsmen:" +"  " + VikingRaiders.getWoodsmen());
@@ -325,7 +327,7 @@ public class mainWindowGUI extends javax.swing.JFrame {
         jLabelIncome.setText("Income:" + "  " +valueOf(VikingRaiders.getIncomeTick()));
         jLabelFarmers.setText("Number of farmers:" + "  " + valueOf(VikingRaiders.getFarmers()));
         jLabelSmiths.setText("Number of smiths:" + "  " + valueOf(VikingRaiders.getSmiths()));
-        
+       
         
     }
     /**

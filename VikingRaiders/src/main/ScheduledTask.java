@@ -28,6 +28,7 @@ public class ScheduledTask extends TimerTask {
         int updatedWood = wood + woodIncome;
         VikingRaiders.setWood(updatedWood);
         gui.setVisible(true);
+       
         if (VikingRaiders.getFarmers() > 10 && VikingRaiders.getFarmhouses() == 0) {
             int happiness = VikingRaiders.getHappiness();
             VikingRaiders.setHappiness(happiness-1);
