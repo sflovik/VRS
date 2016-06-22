@@ -48,7 +48,7 @@ public class missionsGUI extends javax.swing.JFrame {
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Odds of success: 50%\nRewards:\n- 50 pennings\n- 10 iron\n\nRaid the neighbour! The jarl to\nthe east has found a new way\nto forge weaponry. Raid his \nforges and bring me the plans!");
+        jTextArea1.setText("Odds of success: 50%\n\nRewards:\n- 50 pennings\n- 10 iron\n\nCost if you fail:\n- 20 pennings\n\nRaid the neighbour! The jarl to\nthe east has found a new way\nto forge weaponry. Raid his \nforges and bring me the plans!");
         jScrollPane1.setViewportView(jTextArea1);
 
         btnAcceptQuest.setText("Accept");
@@ -70,7 +70,7 @@ public class missionsGUI extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnAcceptQuest)
                     .addComponent(btnDeclineQuest))
-                .addGap(0, 151, Short.MAX_VALUE))
+                .addGap(0, 166, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,15 +155,28 @@ public class missionsGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAcceptQuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptQuestActionPerformed
-        VikingRaiders.performMission();
-        String result = VikingRaiders.getMissionResult();
-        switch (result) {
-                case "win":
-                    JOptionPane.showMessageDialog(null, "Success!");
-                    break;
-                case "loss":
-                    JOptionPane.showMessageDialog(null, "Fail :(");
-                    break;
+        int potLoss = 20;
+        if (VikingRaiders.getBank() >= potLoss) {
+            VikingRaiders.performMission();
+        
+            String result = VikingRaiders.getMissionResult();
+            switch (result) {
+                    case "win":
+                        JOptionPane.showMessageDialog(null, "Success! 50 pennings and 10 iron rewarded.");
+                        int bankWin = VikingRaiders.getBank();
+                        VikingRaiders.setBank(bankWin + 50);
+                        int iron = VikingRaiders.getIron();
+                        VikingRaiders.setIron(iron + 10);
+                        break;
+                    case "loss":
+                        JOptionPane.showMessageDialog(null, "Fail. 20 pennings removed from your treasury");
+                        int bankLose = VikingRaiders.getBank();
+                        VikingRaiders.setBank(bankLose - 20);
+                        break;
+            }
+        }
+        else if (VikingRaiders.getBank() < potLoss) {
+            JOptionPane.showMessageDialog(null, "You can not afford the potential loss");
         }
     }//GEN-LAST:event_btnAcceptQuestActionPerformed
 
