@@ -6,6 +6,8 @@
 package main;
 
 import static java.lang.String.valueOf;
+import java.util.HashSet;
+import java.util.Set;
 import javax.swing.JOptionPane;
 
 /**
@@ -22,7 +24,7 @@ public class mainWindowGUI extends javax.swing.JFrame {
     public mainWindowGUI() {
         initComponents();
         updateLabels();
-        
+        setTooltips();
         
     }
 
@@ -376,6 +378,21 @@ public class mainWindowGUI extends javax.swing.JFrame {
         VikingRaiders.buyFisherman();
         updateLabels();
     }//GEN-LAST:event_btnBuyFishermanActionPerformed
+    public void setTooltips() {
+        btnBuyFarmer.setToolTipText("Cost: 10 pennings." + "  " + "Awards: +1 income, +10 food." + "  " + "Requirements: none");
+        btnBuyFarmhouse.setToolTipText("Cost: 10 pennings." + "  " + "Awards: Increased farmer capacity by 10." + "  " + "Requirements: none");
+        btnBuyForge.setToolTipText("Cost: 50 pennings." + "  " + "Awards: Unlocked recruitment of smith. "
+                + "Increased smith capacity by 10." + "  " + "Requirements: none");
+        btnBuySmith.setToolTipText("Cost: 50 pennings, 5 upkeep." + "  " + "Awards: +5 income, +1 iron production." + "  " + "Requirements: forge");
+        btnBuyWoodsman.setToolTipText("Cost: 200 pennings, 10 iron, 10 upkeep" + "  " + "Awards: +1 Wood income" + "  " + "Requirements: smith");
+        btnBuyWoodshop.setToolTipText("Cost: 400 pennings, 50 wood." +"  " + "Awards: Enables recruitment of boatbuilders");
+        btnBuyBoatbuilder.setToolTipText("Cost: 100 pennings, 10 upkeep." + "  " + "Awards: Enables production of fishingboats." + "  "
+                + "Requirements: 1 woodshop");
+        btnBuyFishingboat.setToolTipText("Cost: 150 pennings, 20 iron, 200 wood." + "  " + "Awards: Enables recruitment of fishermen." + "  "
+                + "Requirements: 1 boatbuilder");
+        btnBuyFisherman.setToolTipText("Cost: 200 pennings." + "  " + "Awards: +20 income, +20 food." + "  " + "Requirements: Fishingboat");
+        
+    }
     public void updateLabels() {
         jLabelBoatbuilders.setText("Number of boatbuilders:" + "  " + VikingRaiders.getBoatbuilders());
         jLabelFishingboats.setText("Number of fishingboats:" + "  " + VikingRaiders.getFishingboats());
